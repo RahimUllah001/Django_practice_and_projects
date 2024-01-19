@@ -1,2 +1,9 @@
-<h1>welcome {{name}}</h1> <br> 
-<h1>yr {{age}}</h1> 
+<h1>Enter ypur text here</h1> 
+<form method = "POST" action = "counter "  >
+    {% csrf_token %}   {% comment %} #  cross side request forgery {% endcomment %}
+
+<textarea  name = "text" rows = "25" cols = "100"></textarea><br>
+
+<input type="submit"/>
+
+</form>

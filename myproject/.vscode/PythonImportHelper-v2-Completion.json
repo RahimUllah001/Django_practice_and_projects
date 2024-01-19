@@ -135,7 +135,7 @@
         "kind": 5,
         "importPath": "myapp.urls",
         "description": "myapp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index')       #when the first quotes are epmty it means root url\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index'),       #when the first quotes are epmty it means root url\n    path('counter', views.counter, name = 'counter')\n]",
         "detail": "myapp.urls",
         "documentation": {}
     },
@@ -144,7 +144,16 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def index(request):\n    context = {\n        'name' : 'rahimddd',\n        'age' : 23\n    }\n    return render(request, 'index.html', context)",
+        "peekOfCode": "def index(request):\n    context = {\n        'name' : 'rahimddd',\n        'age' : 23\n    }\n    return render(request, 'index.html', context) \ndef counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})",
+        "detail": "myapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "counter",
+        "kind": 2,
+        "importPath": "myapp.views",
+        "description": "myapp.views",
+        "peekOfCode": "def counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -261,7 +270,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = (os.path.join(BASE_DIR,'STATIC'),)\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
         "detail": "myproject.settings",
         "documentation": {}
     },
@@ -270,7 +279,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = (os.path.join(BASE_DIR,'STATIC'),)\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "myproject.settings",
         "documentation": {}
     },
@@ -279,7 +288,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = (os.path.join(BASE_DIR,'STATIC'),)\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "myproject.settings",
         "documentation": {}
     },
@@ -288,7 +297,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = (os.path.join(BASE_DIR,'STATIC'),)\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "myproject.settings",
         "documentation": {}
     },
@@ -297,7 +306,16 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = (os.path.join(BASE_DIR,'STATIC'),)\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "myproject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "myproject.settings",
+        "description": "myproject.settings",
+        "peekOfCode": "STATICFILES_DIRS = (os.path.join(BASE_DIR,'STATIC'),)\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "myproject.settings",
         "documentation": {}
     },

@@ -259,7 +259,7 @@
         "kind": 5,
         "importPath": "myapp.urls",
         "description": "myapp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index'),       #when the first quotes are epmty it means root url\n    path('counter', views.counter, name = 'counter'), \n    path('register', views.register, name = 'register'),\n    path('login', views.login,name='login')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index'),       #when the first quotes are epmty it means root url\n    path('counter', views.counter, name = 'counter'), \n    path('register', views.register, name = 'register'),\n    path('login', views.login,name='login'),\n    path('logout', views.logout,name='logout')\n]",
         "detail": "myapp.urls",
         "documentation": {}
     },
@@ -296,6 +296,15 @@
         "importPath": "myapp.views",
         "description": "myapp.views",
         "peekOfCode": "def login(request):\n    if request.method == 'POST':\n        username = request.POST['username']\n        password= request.POST['password']\n        user = auth.authenticate(username = username,password = password ) \n        if user is not None:\n            auth.login(request,user)\n            return redirect('/')\n        else:\n            messages.info(request, 'Credential Ivalid') ",
+        "detail": "myapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "myapp.views",
+        "description": "myapp.views",
+        "peekOfCode": "def logout(request):\n    auth.logout(request)\n    return redirect('/')",
         "detail": "myapp.views",
         "documentation": {}
     },

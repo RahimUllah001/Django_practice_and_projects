@@ -1,6 +1,70 @@
 [
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -21,14 +85,6 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -72,11 +128,43 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
         "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Feature",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -122,6 +210,33 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "myapp.migrations.0001_initial",
+        "description": "myapp.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Feature',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n            ],",
+        "detail": "myapp.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "myapp.migrations.0002_feature_detail_feature_name",
+        "description": "myapp.migrations.0002_feature_detail_feature_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('myapp', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='feature',\n            name='detail',\n            field=models.CharField(default='Default Detail Value', max_length=500),\n        ),",
+        "detail": "myapp.migrations.0002_feature_detail_feature_name",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "myapp.migrations.0003_alter_feature_detail_alter_feature_name",
+        "description": "myapp.migrations.0003_alter_feature_detail_alter_feature_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('myapp', '0002_feature_detail_feature_name'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='feature',\n            name='detail',\n            field=models.CharField(max_length=500),\n        ),",
+        "detail": "myapp.migrations.0003_alter_feature_detail_alter_feature_name",
+        "documentation": {}
+    },
+    {
         "label": "MyappConfig",
         "kind": 6,
         "importPath": "myapp.apps",
@@ -131,11 +246,20 @@
         "documentation": {}
     },
     {
+        "label": "Feature",
+        "kind": 6,
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "peekOfCode": "class Feature(models.Model):\n#     id: int #not use id b/c in databse id is assign byself to every thing\n    name = models.CharField(max_length=500)\n    detail = models.CharField(max_length=500)",
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "myapp.urls",
         "description": "myapp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index'),       #when the first quotes are epmty it means root url\n    path('counter', views.counter, name = 'counter')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index'),       #when the first quotes are epmty it means root url\n    path('counter', views.counter, name = 'counter'), \n    path('register', views.register, name = 'register'),\n    path('login', views.login,name='login')\n]",
         "detail": "myapp.urls",
         "documentation": {}
     },
@@ -144,7 +268,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def index(request):\n    context = {\n        'name' : 'rahimddd',\n        'age' : 23\n    }\n    return render(request, 'index.html', context) \ndef counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})",
+        "peekOfCode": "def index(request):\n    features = Feature.objects.all()\n    return render(request, 'index.html', {'features': features}) \ndef counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})   \ndef register(request):\n    if request.method == 'POST':\n        username = request.POST['username']",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -153,7 +277,25 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})",
+        "peekOfCode": "def counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})   \ndef register(request):\n    if request.method == 'POST':\n        username = request.POST['username']\n        email = request.POST['email']\n        password= request.POST['password']\n        password2 = request.POST['password2']",
+        "detail": "myapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "myapp.views",
+        "description": "myapp.views",
+        "peekOfCode": "def register(request):\n    if request.method == 'POST':\n        username = request.POST['username']\n        email = request.POST['email']\n        password= request.POST['password']\n        password2 = request.POST['password2']\n        if password == password2:\n            if User.objects.filter(email=email).exists():\n                messages.info(request,'Email already use')\n                return redirect('register')",
+        "detail": "myapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "myapp.views",
+        "description": "myapp.views",
+        "peekOfCode": "def login(request):\n    if request.method == 'POST':\n        username = request.POST['username']\n        password= request.POST['password']\n        user = auth.authenticate(username = username,password = password ) \n        if user is not None:\n            auth.login(request,user)\n            return redirect('/')\n        else:\n            messages.info(request, 'Credential Ivalid') ",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -198,7 +340,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'myapp'",
         "detail": "myproject.settings",
         "documentation": {}
     },
@@ -207,7 +349,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'myapp'\n]\nMIDDLEWARE = [",
         "detail": "myproject.settings",
         "documentation": {}
     },

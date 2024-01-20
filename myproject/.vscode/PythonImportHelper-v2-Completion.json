@@ -259,7 +259,7 @@
         "kind": 5,
         "importPath": "myapp.urls",
         "description": "myapp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index'),       #when the first quotes are epmty it means root url\n    path('counter', views.counter, name = 'counter'), \n    path('register', views.register, name = 'register'),\n    path('login', views.login,name='login'),\n    path('logout', views.logout,name='logout')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name = 'index'),       #when the first quotes are epmty it means root url\n    path('counter', views.counter, name = 'counter'), \n    path('register', views.register, name = 'register'),\n    path('login', views.login,name='login'),\n    path('logout', views.logout,name='logout'),\n    path('post/<str:pk>', views.post,name='post')\n]",
         "detail": "myapp.urls",
         "documentation": {}
     },
@@ -268,7 +268,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def index(request):\n    features = Feature.objects.all()\n    return render(request, 'index.html', {'features': features}) \ndef counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})   \ndef register(request):\n    if request.method == 'POST':\n        username = request.POST['username']",
+        "peekOfCode": "def index(request):\n    features = Feature.objects.all()\n    return render(request, 'index.html', {'features': features}) \ndef counter(request):\n    # words = request.POST['text']\n    # amount_of_words = len(words.split())\n    posts = [1,2,3,4,5,'tim','john', 'tom']\n    # return render(request,'counter.html', {'amount': amount_of_words})   \n    return render(request,'counter.html', {'posts': posts})   \ndef register(request):",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -277,7 +277,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def counter(request):\n    words = request.POST['text']\n    amount_of_words = len(words.split())\n    return render(request,'counter.html', {'amount': amount_of_words})   \ndef register(request):\n    if request.method == 'POST':\n        username = request.POST['username']\n        email = request.POST['email']\n        password= request.POST['password']\n        password2 = request.POST['password2']",
+        "peekOfCode": "def counter(request):\n    # words = request.POST['text']\n    # amount_of_words = len(words.split())\n    posts = [1,2,3,4,5,'tim','john', 'tom']\n    # return render(request,'counter.html', {'amount': amount_of_words})   \n    return render(request,'counter.html', {'posts': posts})   \ndef register(request):\n    if request.method == 'POST':\n        username = request.POST['username']\n        email = request.POST['email']",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -304,7 +304,16 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def logout(request):\n    auth.logout(request)\n    return redirect('/')",
+        "peekOfCode": "def logout(request):\n    auth.logout(request)\n    return redirect('/')\ndef post(request, pk):\n    return render(request, 'post.html',{'pk': pk})",
+        "detail": "myapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "post",
+        "kind": 2,
+        "importPath": "myapp.views",
+        "description": "myapp.views",
+        "peekOfCode": "def post(request, pk):\n    return render(request, 'post.html',{'pk': pk})",
         "detail": "myapp.views",
         "documentation": {}
     },

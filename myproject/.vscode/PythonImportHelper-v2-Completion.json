@@ -403,7 +403,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'myproject.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = 'myproject.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'myproject',\n        'USER':'postgres',\n        'PASSWORD': 'Ali_wazir1',\n        'HOST':'localhost'",
         "detail": "myproject.settings",
         "documentation": {}
     },
@@ -412,7 +412,7 @@
         "kind": 5,
         "importPath": "myproject.settings",
         "description": "myproject.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'myproject',\n        'USER':'postgres',\n        'PASSWORD': 'Ali_wazir1',\n        'HOST':'localhost'\n    }\n}\n# Password validation",
         "detail": "myproject.settings",
         "documentation": {}
     },
